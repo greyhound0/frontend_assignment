@@ -2,11 +2,11 @@ import React from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
-function ProfileList({ userImage, userName }) {
+function ProfileList({ userImage, userName, id }) {
   const navigate = useNavigate();
 
   const moveToProfile = () => {
-    navigate("/" + userName);
+    navigate("/" + "user" + "/" + id);
   };
 
   return (

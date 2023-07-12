@@ -14,6 +14,7 @@ function UserModal({ apiData }) {
               <ProfileList
                 userImage={user.profilepicture}
                 userName={user.name}
+                id={user.id}
               />
             );
           })}

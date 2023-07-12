@@ -1,0 +1,17 @@
+.userDetailCard {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__label {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.352);
+    margin: 10px;
+  }
+
+  &__value {
+    font-weight: 700;
+    margin: 10px;
+  }
+}

@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   margin: 15px;
+  cursor: pointer;
 }
 hr {
   width: 80%;

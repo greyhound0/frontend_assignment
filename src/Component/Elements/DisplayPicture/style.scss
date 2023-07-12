@@ -1,0 +1,16 @@
+.DisplayPicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__Image {
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 12px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  &__Name {
+    font-size: 16px;
+    margin: 0;
+  }
+}
