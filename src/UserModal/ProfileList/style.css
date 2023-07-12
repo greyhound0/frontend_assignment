@@ -1,0 +1,17 @@
+.image {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  object-fit: contain;
+  margin-right: 15px;
+}
+
+.listCard {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+}
+hr {
+  width: 80%;
+  opacity: 0.5;
+}
