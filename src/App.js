@@ -3,10 +3,11 @@ import axios from "axios";
 import "./app.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UserModal from "./UserModal";
-import UserProfile from "./userProfile";
-import DisplayPicture from "./Component/Elements/DisplayPicture";
 import UserDetailCard from "./Component/Elements/UserDetailCard";
-import PersonalDetailCard from "./Component/Modules/PersonalDetail";
+import Header from "./Component/Elements/Header";
+import Layout from "./Component/HigherOrderComponents/Layout";
+import ComingSoon from "./Component/Elements/ComingSoon";
+import UserProfile from "./Component/Pages/userProfile";
 function App() {
   const [apiData, setApiData] = useState(null);
 
@@ -32,17 +33,42 @@ function App() {
 
   return (
     <div className="App">
-      <PersonalDetailCard
-        username="Manas"
-        email="manas@manas"
-        phone="9897970778"
-        website="greyhound.com"
-      />
       <UserDetailCard />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<UserModal apiData={apiData} />} />
-          <Route path="/user/:id" element={<UserProfile apiData={apiData} />} />
+          <Route
+            path="/profile/:id"
+            element={
+              <Layout>
+                <UserProfile apiData={apiData} />
+              </Layout>
+            }
+          />
+          <Route
+            path="/posts/:id"
+            element={
+              <Layout>
+                <ComingSoon />
+              </Layout>
+            }
+          />
+          <Route
+            path="/gallery/:id"
+            element={
+              <Layout>
+                <ComingSoon />
+              </Layout>
+            }
+          />
+          <Route
+            path="/toDo/:id"
+            element={
+              <Layout>
+                <ComingSoon />
+              </Layout>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

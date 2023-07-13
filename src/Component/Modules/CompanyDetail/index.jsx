@@ -1,11 +1,17 @@
 import React from "react";
 import RenderDetails from "../../Elements/RenderDetails";
 
-function CompanyDetails(props = { name: "", catchphrase: "", bs: "" }) {
+function CompanyDetails(props = { Name: "", Catchphrase: "", Bs: "" }) {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <h4>Company</h4>
-      <RenderDetails object={props} />;
+      <RenderDetails object={props} />
     </div>
   );
 }

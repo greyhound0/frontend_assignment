@@ -6,7 +6,6 @@ function UserDetailCard({ label, value }) {
     <div className="userDetailCard">
       <p className="userDetailCard__label">{label}</p>
       <span>:</span>
-
       <span className="userDetailCard__value">{value}</span>
     </div>
   );

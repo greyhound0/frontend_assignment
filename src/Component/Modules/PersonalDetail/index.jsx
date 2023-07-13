@@ -3,16 +3,16 @@ import RenderDetails from "../../Elements/RenderDetails";
 import DisplayPicture from "../../Elements/DisplayPicture";
 
 function PersonalDetail({
-  username = "",
-  email = "",
-  phone = "",
-  website = "",
-  profilePicture,
+  Username = "",
+  Email = "",
+  Phone = "",
+  Website = "",
+  ProfilePicture,
 }) {
   return (
     <div>
-      <DisplayPicture large profilePicture={profilePicture} name={username} />
-      <RenderDetails object={{ username, email, phone, website }} />;
+      <DisplayPicture large profilePicture={ProfilePicture} name={Username} />
+      <RenderDetails object={{ Username, Email, Phone, Website }} />;
     </div>
   );
 }
