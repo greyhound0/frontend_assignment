@@ -80,7 +80,7 @@ function LocationPicture({ lat, lng }) {
 ></iframe>`;
   return (
     <div
-      style={{ borderRadius: "20px", overflow: "hidden" }}
+      style={{ borderRadius: "20px", overflow: "hidden", marginTop: "20px" }}
       dangerouslySetInnerHTML={{ __html: map }}
     ></div>
   );
