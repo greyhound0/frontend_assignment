@@ -3,12 +3,22 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  width: 250px;
+  width: 100%;
   background-color: rgb(61, 87, 200);
-  color: white;
   padding: 30px;
   border-radius: 20px;
   font-weight: 500;
+  &__detailSelected {
+    color: rgba(255, 255, 255, 0.573);
+    text-decoration: none;
+    cursor: pointer;
+
+    font-size: 18px;
+  }
+
+  .active {
+    color: white;
+  }
 }
 hr {
   width: 100%;

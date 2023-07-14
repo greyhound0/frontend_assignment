@@ -8,9 +8,18 @@ function CompanyDetails(props = { Name: "", Catchphrase: "", Bs: "" }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        height: "30%",
       }}
     >
-      <h4>Company</h4>
+      <div
+        style={{
+          fontSize: "1.3rem ",
+          color: "rgba(0,0,0,0.4)",
+          fontWeight: "500",
+        }}
+      >
+        Company
+      </div>
       <RenderDetails object={props} />
     </div>
   );

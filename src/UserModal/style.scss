@@ -1,0 +1,33 @@
+@import "../global.scss";
+.UserModalWrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-content: center;
+  background: url(../../public/background.jpg);
+  background-size: 100% 100%;
+}
+
+.UserModal {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
+  width: 500px;
+
+  &__Header {
+    padding: 24px;
+    text-align: center;
+
+    background-color: #f6f6f6;
+
+    margin: 0 !important;
+  }
+  &__Body {
+    max-height: 300px;
+    overflow: auto;
+    @include macOsScrollbar();
+  }
+}

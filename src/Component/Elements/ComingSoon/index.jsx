@@ -2,7 +2,14 @@ import React from "react";
 
 function ComingSoon() {
   return (
-    <h1 style={{ fontSize: "8  0px", color: "rgb(238,238,238)" }}>
+    <h1
+      style={{
+        fontSize: "80px",
+        color: "rgb(238,238,238)",
+        marginLeft: "250px",
+        marginTop: "250px",
+      }}
+    >
       Coming Soon
     </h1>
   );

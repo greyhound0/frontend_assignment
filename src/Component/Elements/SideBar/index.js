@@ -1,28 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
-function SideBar({ id }) {
-  const navigate = useNavigate();
+function SideBar() {
+  const { id } = useParams();
+
   const headingArray = [
-    { name: "Profile", route: "/profile/:id" },
-    { name: "Posts", route: "/posts/:id" },
-    { name: "Gallery", route: "/gallery/:id" },
-    { name: "ToDo", route: "/toDo/:id" },
+    { name: "Profile", route: "/" + id + "/profile" },
+    { name: "Posts", route: "/" + id + "/posts" },
+    { name: "Gallery", route: "/" + id + "/gallery" },
+    { name: "ToDo", route: "/" + id + "/toDo" },
   ];
-
-  const navigateToHeading = (route) => {
-    navigate(route);
-  };
 
   return (
     <div className="sidebar">
       {headingArray.map((heading, index) => (
-        <div key={index} onClick={() => navigateToHeading(heading.route)}>
+        <NavLink
+          className="sidebar__detailSelected"
+          activeClassName="sidebar__detailSelected-active"
+          key={index}
+          to={heading.route}
+        >
           {heading.name}
-        </div>
+          <hr />
+        </NavLink>
       ))}
-      <hr />
     </div>
   );
 }

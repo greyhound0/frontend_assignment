@@ -8,6 +8,7 @@ import Header from "./Component/Elements/Header";
 import Layout from "./Component/HigherOrderComponents/Layout";
 import ComingSoon from "./Component/Elements/ComingSoon";
 import UserProfile from "./Component/Pages/userProfile";
+import UserRoutes from "./Component/Pages/UserRoutes";
 function App() {
   const [apiData, setApiData] = useState(null);
 
@@ -33,12 +34,29 @@ function App() {
 
   return (
     <div className="App">
-      <UserDetailCard />
       <BrowserRouter>
+        {/* <Layout> */}
         <Routes>
           <Route path="/" element={<UserModal apiData={apiData} />} />
           <Route
-            path="/profile/:id"
+            path="/:id/*"
+            element={
+              <Layout userList={apiData?.users} Component={UserRoutes} />
+              //   {/* <UserRoutes /> */}
+              // {/* </Layout> */}
+            }
+          />
+        </Routes>
+        {/* </Layout> */}
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+{
+  /* <Route
+            path="/:id/profile"
             element={
               <Layout>
                 <UserProfile apiData={apiData} />
@@ -46,7 +64,7 @@ function App() {
             }
           />
           <Route
-            path="/posts/:id"
+            path="/:id/posts"
             element={
               <Layout>
                 <ComingSoon />
@@ -54,7 +72,7 @@ function App() {
             }
           />
           <Route
-            path="/gallery/:id"
+            path="/:id/gallery"
             element={
               <Layout>
                 <ComingSoon />
@@ -62,17 +80,11 @@ function App() {
             }
           />
           <Route
-            path="/toDo/:id"
+            path="/:id/toDo"
             element={
               <Layout>
                 <ComingSoon />
               </Layout>
             }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+          /> */
 }
-
-export default App;

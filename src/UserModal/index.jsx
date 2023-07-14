@@ -1,14 +1,13 @@
 import React from "react";
-import "./style.css";
+import "./style.scss";
 import ProfileList from "./ProfileList";
 
 function UserModal({ apiData }) {
-  console.log("modalData", apiData);
   return (
-    <div>
-      <h3 className="modalHeader">Select an Account</h3>
-      <div className="modal">
-        <div className="modalBody">
+    <div className="UserModalWrapper">
+      <div className="UserModal">
+        <h3 className="UserModal__Header">Select an Account</h3>
+        <div className="UserModal__Body">
           {apiData?.users?.map((user) => {
             return (
               <ProfileList

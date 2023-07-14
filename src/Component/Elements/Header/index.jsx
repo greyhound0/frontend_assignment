@@ -1,14 +1,26 @@
 import React from "react";
 import DisplayPicture from "../DisplayPicture";
-
-function Header({ heading }) {
+function Header({ heading, name, profilepicture, setShowLogoutOptions }) {
   return (
-    <div>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <h3>Heading</h3>
-        <DisplayPicture name="Manas Gupta" />
+    <div className="Header">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <h3>{heading}</h3>
+        <span
+          onClick={() =>
+            setShowLogoutOptions((showLogoutOptions) => !showLogoutOptions)
+          }
+        >
+          <DisplayPicture name={name} profilepicture={profilepicture} />
+        </span>
       </div>
-      <hr />
+      <hr style={{ marginLeft: "50px" }} />
     </div>
   );
 }

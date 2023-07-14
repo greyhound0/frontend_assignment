@@ -3,23 +3,26 @@ import Address from "../../Modules/Address";
 import CompanyDetails from "../../Modules/CompanyDetail";
 import PersonalDetail from "../../Modules/PersonalDetail";
 
-function UserProfile({ apiData }) {
+function UserProfile({ personalData, company, address }) {
+  console.log("USERPROFILE ADDRESS", address);
+
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
-      <div>
-        <PersonalDetail
-          Username="Manas"
-          Email="manas@manas"
-          Phone="9897970778"
-          Website="greyhound.com"
-        />
-        <CompanyDetails
-          Name="Bla"
-          Catchphrase="catch me if you can"
-          Bs="booooo"
-        />
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        gap: "50px",
+        marginTop: "50px",
+        fontSize: "40px",
+      }}
+    >
+      <div className="userDetailOnLeft">
+        <PersonalDetail {...personalData} />
+        <hr style={{ width: "70%" }} />
+        <CompanyDetails {...company} />
       </div>
-      <Address Street="Baker's" City="Delhi" Suite="101" Zipcode="226011" />
+
+      <Address {...address} />
     </div>
   );
 }

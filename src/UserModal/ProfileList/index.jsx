@@ -6,7 +6,7 @@ function ProfileList({ userImage, userName, id }) {
   const navigate = useNavigate();
 
   const moveToProfile = () => {
-    navigate("/" + "profile" + "/" + id);
+    navigate("/" + id + "/" + "profile");
   };
 
   return (
