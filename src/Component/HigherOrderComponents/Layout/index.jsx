@@ -39,7 +39,7 @@ function Layout({ Component, userList }) {
     setShowLogoutOptions(false);
   }, [id]);
 
-  const chatUsers = userList?.filter?.((user) => user?.id != id);
+  const chatUsers = userList?.filter?.((user) => user?.id !== id);
   return (
     <div
       style={{
